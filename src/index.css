@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DESIGN SYSTEM — All styles defined here ===== */
+
+@layer base {
+  :root {
+    /* Background: deep charcoal */
+    --background: 220 20% 7%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 210 20% 92%;
+
+    /* Primary: Electric Cyan */
+    --primary: 189 100% 43%;
+    --primary-foreground: 220 20% 7%;
+
+    /* Secondary: subtle surface */
+    --secondary: 220 15% 14%;
+    --secondary-foreground: 210 20% 80%;
+
+    --muted: 220 15% 14%;
+    --muted-foreground: 210 12% 50%;
+
+    /* Accent: warm amber */
+    --accent: 38 95% 60%;
+    --accent-foreground: 220 20% 7%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 189 100% 43%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --cyan: 189 100% 43%;
+    --amber: 38 95% 60%;
+    --surface: 220 18% 10%;
+    --surface-raised: 220 15% 14%;
+    --surface-border: 220 15% 18%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 7%) 0%, hsl(220 25% 12%) 100%);
+    --gradient-cyan: linear-gradient(135deg, hsl(189 100% 43%), hsl(200 100% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(220 18% 12%), hsl(220 15% 9%));
+
+    /* Shadows */
+    --shadow-cyan: 0 0 30px -5px hsl(189 100% 43% / 0.4);
+    --shadow-card: 0 8px 32px -8px hsl(220 20% 3% / 0.8);
+    --shadow-glow: 0 0 60px -10px hsl(189 100% 43% / 0.2);
+
+    /* Sidebar (keep defaults) */
+    --sidebar-background: 220 20% 7%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 189 100% 43%;
+    --sidebar-primary-foreground: 220 20% 7%;
+    --sidebar-accent: 220 15% 14%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 189 100% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-cyan {
+    color: hsl(var(--cyan));
+  }
+  .text-amber {
+    color: hsl(var(--amber));
+  }
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  .bg-surface-raised {
+    background-color: hsl(var(--surface-raised));
+  }
+  .border-surface {
+    border-color: hsl(var(--surface-border));
+  }
+  .gradient-text {
+    background: var(--gradient-cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .shadow-cyan {
+    box-shadow: var(--shadow-cyan);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
