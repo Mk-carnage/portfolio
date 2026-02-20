@@ -74,8 +74,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-            I craft digital experiences that are <span className="text-foreground font-medium">intuitive, beautiful, and purposeful</span> — 
+          <p className="text-foreground font-medium">
+            I craft digital experiences that are intuitive, beautiful, and purposeful — 
             bridging the gap between design thinking and real-world impact.
           </p>
 
